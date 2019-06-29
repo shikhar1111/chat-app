@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <style>
             .container{
-                padding-top: 20%;
+                padding-top: 5%;
                 padding-left:30%;
             }
             body{
@@ -30,10 +30,18 @@
                 color:white;
                 border-bottom:1px solid white;
                 font-size:20px;
+                padding-bottom:4px; 
+                margin-left:-5%;
+                margin-bottom:20px;
+            }
+            a:hover{
+                text-decoration:none;
+                color:white;
             }
             #group-container{
                 margin-bottom:20px;
                 font-size:30px;
+                margin-left:13%;
             }
             #input1{
                 line-height:20px;
@@ -44,7 +52,7 @@
                 padding-left:20px;
                 color:black;
             }
-            button{
+            .button{
                 padding:10px;
                 border-radius:25px;
                 background-color:greenyellow;
@@ -53,6 +61,16 @@
                 border:none;
                 font-weight: 600;
             }
+            button{
+                outline:none;
+                margin-left:20px;
+                text-decoration: none;
+                border:none;
+                background:transparent;
+                font-size:20px;
+                border-bottom:1px solid white;
+                text-transform: uppercase;
+            }
             @media (max-width:767px){
                 .container{
                 padding-left:10%;
@@ -60,24 +78,38 @@
                 #input1{
                     margin-bottom:2vh;
                 }
-                button{
-                    margin-left:25%;
+                .button{
+                    margin-left:22%;
+                }
+                #group-container{
+                    margin-left:28%;
+                }
+                a{
+                    margin-left:-15%;
                 }
             }
         </style>
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="main">
             <div id="group-container">
                 <% Object.keys(groups).forEach (group =>{  %>
                     <div><%= group %></div>
                     <a href="/<%= group %>">Join</a>
+                    <button>Delete</button>
                 <% }) %>
             </div>
             <form action ='/group' method="POST">
                 <input name ="group" type="text" id="input1" required>
-                <button type ="submit">New Group</button>
+                <button class="button" type ="submit">New Group</button>
             </form>
         </div>
     </body>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+            $("#group-container").remove();
+            });
+        });
+        </script>
 </html>
