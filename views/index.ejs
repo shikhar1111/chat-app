@@ -7,10 +7,18 @@
         <title>Chat App</title>
         <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script>
         <script defer src ="script.js"></script>
+         <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <style>
             .container{
                 padding-top: 20%;
-                padding-left:40%;
+                padding-left:30%;
             }
             body{
                 background: #212121;
@@ -34,6 +42,7 @@
                 font-size:20px;
                 padding: 10px;
                 padding-left:20px;
+                color:black;
             }
             button{
                 padding:10px;
@@ -43,6 +52,17 @@
                 color:white;
                 border:none;
                 font-weight: 600;
+            }
+            @media (max-width:767px){
+                .container{
+                padding-left:10%;
+                }
+                #input1{
+                    margin-bottom:2vh;
+                }
+                button{
+                    margin-left:25%;
+                }
             }
         </style>
     </head>

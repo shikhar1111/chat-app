@@ -10,6 +10,14 @@
   </script>
   <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script>
   <script defer src ="script.js"></script>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <style>
     body {
       padding: 0;
@@ -42,9 +50,9 @@
     button{
       position:fixed;
       top:80%;
-      left:60%;
+      left:61%;
       border-radius:80%;
-      padding:5px;
+      padding:0;
       width:50px;
       height:50px;
       background-color:darkgreen;
@@ -52,13 +60,25 @@
       color:white;
       font-weight: 600;
     }
+    @media (max-width:767px){
+      #message-input{
+        left:7%;
+      }
+      button{
+        left:85%;
+      }
+    }
   </style>
 </head>
 <body>
-    <div id="message-container"></div>
-    <form id="send-container">
-        <input type="text" id="message-input" required>
-        <button type ="submit" id="send-button">></button>
-    </form>
+  <div class="container">
+    <div class="row">
+        <div id="message-container"></div>
+        <form id="send-container">
+            <input type="text" id="message-input" required>
+            <button type ="submit" id="send-button">></button>
+        </form>
+    </div>
+  </div>
 </body>
 </html>
