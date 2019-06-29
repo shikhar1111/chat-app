@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <script>
+    const groupName = "<%= groupName %>"
+  </script>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src ="script.js"></script>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      background: #212121;
+    }
+    #message-container {
+      width: 80%;
+      max-width: 1200px;
+    }
+    #message-container div {
+      padding: 10px;
+      font-size:20px;
+      color:white;
+    }
+    #message-input {
+      flex-grow: 1;
+      position:fixed;
+      top:80%;
+      left:40%;
+      line-height:20px;
+      border-radius:35px;
+      outline: none;
+      font-size:20px;
+      padding: 10px;
+      padding-left:20px;
+    }
+    button{
+      position:fixed;
+      top:80%;
+      left:60%;
+      border-radius:80%;
+      padding:5px;
+      width:50px;
+      height:50px;
+      background-color:darkgreen;
+      font-size:30px;
+      color:white;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+    <div id="message-container"></div>
+    <form id="send-container">
+        <input type="text" id="message-input" required>
+        <button type ="submit" id="send-button">></button>
+    </form>
+</body>
+</html>
