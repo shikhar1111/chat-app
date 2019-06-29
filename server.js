@@ -33,7 +33,7 @@ app.get('/:group',(req,res)=>{
     res.render('group',{groupName:req.params.group })
 })
 
-server.listen(3000)
+server.listen(process.env.PORT || 3000)
 
 io.on('connection', socket=>{
     socket.on('new-user',(group, name) => {
