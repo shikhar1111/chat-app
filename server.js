@@ -22,7 +22,7 @@ app.post('/group',(req,res)=>{
     }
     groups[req.body.group] = {users:{}}
     res.redirect(req.body.group)
-    // send message that group was created
+    // send message that the group was created
     io.emit('group:created',req.body.group)
 })
 
