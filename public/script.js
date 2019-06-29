@@ -1,4 +1,4 @@
-const socket = io('https://chat-app2019.herokuapp.com/socket.io/socket.io.js')
+const socket = io('https://chat-app2019.herokuapp.com')
 const messageContainer = document.getElementById('message-container')
 const groupContainer = document.getElementById('group-container')
 const messageform = document.getElementById('send-container')
