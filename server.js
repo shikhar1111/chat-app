@@ -58,7 +58,3 @@ function getUserGroups(socket){
         return names
     },[])
 }
-
-function del(){
-    delete group
-}
