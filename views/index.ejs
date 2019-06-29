@@ -52,6 +52,7 @@
                 <% Object.keys(groups).forEach (group =>{  %>
                     <div><%= group %></div>
                     <a href="/<%= group %>">Join</a>
+                    <a href="/<%= group %>" onclick="del()">Delete</a>
                 <% }) %>
             </div>
             <form action ='/group' method="POST">
