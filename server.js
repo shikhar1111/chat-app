@@ -60,5 +60,5 @@ function getUserGroups(socket){
 }
 
 function del(){
-    del group
+    delete group
 }
