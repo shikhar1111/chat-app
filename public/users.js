@@ -30,9 +30,9 @@ UserSchema.pre('save', function (next) {
    }
     });
 
-    UserSchema.statics.findByinput = function(email, password){
+    UserSchema.statics.findByinput = function(group, password){
         var user = this;
-        return user.findOne({email}).then((user) => {
+        return user.findOne({group}).then((user) => {
             if(!user){
                 return Promise.reject();
             }
@@ -49,7 +49,7 @@ UserSchema.pre('save', function (next) {
         });
     };
 
-    
+
 var User = mongoose.model('User', UserSchema)
 
 module.exports = {User}

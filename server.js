@@ -7,6 +7,7 @@ var _ = require('lodash')
 const {User} = require('./public/users')
 
 mongoose.Promise=global.Promise;
+// mongodb://localhost:27017/Chat-app
 
 mongoose.connect('mongodb://shikhar:shikhar123@ds345587.mlab.com:45587/chat-app',(e)=>{
   if(e){
@@ -54,9 +55,10 @@ app.post('/group',(req,res)=>{
 app.post('/sign-in',(req,res)=>{
     res.render('login')
 })
-app.post('/login',(req,res)=>{
-    var data = _.pick(req.body, ['email', 'password']);
-    User.findByinput(data.email, data.password).then((user) => {
+app.post('/login', (req,res) => {
+
+    var data = _.pick(req.body, ['group', 'password']);
+    User.findByinput(data.group, data.password).then((user) => {
         // res.send(data);
         groups[req.body.group] = {users:{}}
         res.redirect(req.body.group)
@@ -64,7 +66,9 @@ app.post('/login',(req,res)=>{
     }).catch((e) => {
         res.send('Invalid credentials');
     })
-})
+
+});
+
 app.get('/:group',(req,res)=>{
     if(groups[req.params.group]==null){
         res.redirect('/')
