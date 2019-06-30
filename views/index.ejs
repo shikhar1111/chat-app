@@ -107,9 +107,9 @@
                     <button id="delete">Delete</button>
                  <% }) %> 
             </div>
-            <form action ='/Register' method="POST">
-                <input name ="group" type="text" id="input1" placeholder="Group Name" required><br>
-                <input name ="password" type="password" id="input1" placeholder="Password" minlength="6" required><br>
+            <form action ='/Register' method="POST" autocomplete="off">
+                <input name ="group" type="text" id="input1" placeholder="Group Name" required autocomplete="off"><br>
+                <input name ="password" type="password" id="input1" placeholder="Password" minlength="6"autocomplete="off" required><br>
                 <button class="button" type ="submit">New Group</button>
             </form>
             <form action="/sign-in" method="POST">
