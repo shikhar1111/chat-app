@@ -10,7 +10,7 @@ mongoose.Promise=global.Promise;
 // mongodb://shikhar:shikhar123@ds345587.mlab.com:45587/chat-app
 // mongodb://localhost:27017/Chat-app
 
-mongoose.connect('mongodb://shikhar:shikhar123@ds345587.mlab.com:45587/chat-app',(e)=>{
+mongoose.connect('mongodb://localhost:27017/Chat-app',(e)=>{
   if(e){
    console.log("database not connected");
   }else{
@@ -39,9 +39,12 @@ app.post('/Register', (req, res) => {
 
 });
 
+app.post('/route',(req,res)=>{
+    res.render('index',{groups:groups})
+})
 
 app.get('/',(req,res)=>{
-    res.render('index', {groups:groups})
+    res.render('home')
 })
 
 app.post('/group',(req,res)=>{

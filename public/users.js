@@ -12,6 +12,11 @@ var UserSchema = new mongoose.Schema({
         required:true,
         trim:true,
         unique:true
+    },
+    admin:{
+        type:String,
+        required:true,
+        trim:true,
     }
 })
 
