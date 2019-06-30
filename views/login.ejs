@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Chat App</title>
+        <!-- <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script> -->
+        <!-- <script defer src ="script.js"></script> -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        body{
+            background-color:#212121;
+        }
+        .container{
+            margin-top:15%;
+            padding-left:35%;
+        }
+        #input2{
+            line-height:20px;
+            border-radius:35px;
+            outline: none;
+            font-size:20px;
+            padding: 10px;
+            padding-left:20px;
+            color:black;
+            margin-bottom:2vh;
+        }
+        button{
+            padding:10px;
+            border-radius:25px;
+            background-color:darkblue;
+            font-size:20px;
+            width:120px;
+            margin-left:75px;
+            color:white;
+            border:none;
+            outline: none;
+            font-weight: 600;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="row">
+                <form action="/login" method="POST">
+                    <input type="text" name="group" placeholder="Name of Group" id="input2" required><br>
+                    <input type="password" name="password" placeholder="Password"  id="input2" required><br>
+                    <button type="submit">Login</button> 
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
