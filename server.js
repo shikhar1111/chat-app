@@ -7,9 +7,10 @@ var _ = require('lodash')
 const {User} = require('./public/users')
 
 mongoose.Promise=global.Promise;
+// mongodb://shikhar:shikhar123@ds345587.mlab.com:45587/chat-app
 // mongodb://localhost:27017/Chat-app
 
-mongoose.connect('mongodb://shikhar:shikhar123@ds345587.mlab.com:45587/chat-app',(e)=>{
+mongoose.connect('mongodb://localhost:27017/Chat-app',(e)=>{
   if(e){
    console.log("database not connected");
   }else{
