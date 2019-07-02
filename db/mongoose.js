@@ -8,7 +8,7 @@ mongoose.Promise=global.Promise
 // for mlab database
 // mongodb://shikhar:shikhar123@ds345587.mlab.com:45587/chat-app
 
-mongoose.connect('mongodb://localhost:27017/Chat-app',(e)=>{
+mongoose.connect('mongodb://shikhar:shikhar123@ds345587.mlab.com:45587/chat-app',(e)=>{
     if(e){
         console.log("Database not connected")
     }else{
