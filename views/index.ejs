@@ -5,22 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Chat App</title>
-        <!-- <script defer src="http://localhost:3000/socket.io/socket.io.js"></script> -->
-        <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script>
-
+        <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+        <!-- <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script> -->
         <script defer src ="script.js"></script>
-         <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <style>
             .container{
-                padding-top: 15%;
-                padding-left:30%;
+            padding-top: 15%;
+            padding-left:30%;
             }
             body{
                 background: #212121;
@@ -79,9 +79,9 @@
             }
             @media (max-width:767px){
                 .container{
-                padding-left:10%;
-                padding-top:40%;
-                }
+                    padding-left:10%;
+                    padding-top:40%;
+                }   
                 #input1{
                     margin-bottom:2vh;
                 }
@@ -105,7 +105,7 @@
                     <div><%= group %></div>
                     <a href="#" onclick="alert('First Login')">Join</a>
                     <button id="delete">Delete</button>
-                 <% }) %>  -->
+                <% }) %>  -->
             </div>
             <form action ='/Register' method="POST" autocomplete="off">
                 <input name ="group" type="text" id="input1" placeholder="Group Name" required autocomplete="off"><br>
@@ -115,11 +115,11 @@
             </form>
         </div>
     </body>
-    <script>
+    <!-- <script>
         $(document).ready(function(){
             $("#delete").click(function(){
-            $("#group-container").remove();
+                $("#group-container").remove();
             });
         });
-        </script>
+    </script> -->
 </html>

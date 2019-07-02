@@ -1,96 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Chat App</title>
-  <script>
-    const groupName = "<%= groupName %>"
-  </script>
-  <!-- <script defer src="http://localhost:3000/socket.io/socket.io.js"></script> -->
-        <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script>
-  <script defer src ="script.js"></script>
-   <!-- Latest compiled and minified CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat App</title>
+    <script>
+      const groupName = "<%= groupName %>"
+    </script>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <!-- <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script> -->
+    <script defer src ="script.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-   <!-- jQuery library -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-   <!-- Latest compiled JavaScript -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      background: #212121;
-    }
-    #message-container {
-      width: 80%;
-      max-width: 1200px;
-    }
-    #message-container div {
-      padding: 10px;
-      font-size:20px;
-      color:white;
-    }
-    #message-input {
-      flex-grow: 1;
-      position:fixed;
-      top:80%;
-      left:40%;
-      line-height:20px;
-      border-radius:35px;
-      outline: none;
-      font-size:20px;
-      padding: 10px;
-      padding-left:20px;
-    }
-    button{
-      position:fixed;
-      top:80%;
-      left:61%;
-      border-radius:80%;
-      padding:0;
-      width:50px;
-      height:50px;
-      background-color:darkgreen;
-      font-size:30px;
-      color:white;
-      font-weight: 600;
-    }
-    @media (max-width:767px){
-      #message-input{
-        left:7%;
-        margin-top:55px;
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        background: #212121;
       }
+      #message-container {
+        width: 80%;
+        max-width: 1200px;
+      }
+      #message-container div {
+        padding: 10px;
+        font-size:20px;
+        color:white;
+      }
+      #message-input {
+        flex-grow: 1;
+        position:fixed;
+        top:80%;
+        left:40%;
+        line-height:20px;
+        border-radius:35px;
+        outline: none;
+        font-size:20px;
+        padding: 10px;
+        padding-left:20px;
+      } 
       button{
-        left:85%;
-        margin-top:55px; 
+        position:fixed;
+        top:80%;
+        left:61%;
+        border-radius:80%;
+        padding:0;
+        width:50px;
+        height:50px;
+        background-color:darkgreen;
+        font-size:30px;
+        color:white;
+        font-weight: 600;
       }
-      #message-container{
-        left:-10%;
-        width:100%;
-        height: 480px;
-        /* overflow-y:auto; */
-        /* position:absolute; */
-        /* overflow: inherit;   */
+      @media (max-width:767px){
+        #message-input{
+          left:7%;
+          margin-top:55px;
+        }
+        button{
+          left:85%;
+          margin-top:55px; 
+        }
+        #message-container{
+          left:-10%;
+          width:100%;
+          height: 480px;
+        }
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-        <div id="message-container"></div>
-        <form id="send-container" autocomplete="off">
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <div id="message-container"></div>
+          <form id="send-container" autocomplete="off">
             <input type="text" id="message-input" required autocomplete="off">
             <button type ="submit" id="send-button">></button>
-        </form>
+          </form>
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
