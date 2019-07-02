@@ -1,6 +1,6 @@
-const app = express()
 const _ = require('lodash')
 const express = require('express')
+const app = express()
 const io = require('socket.io')(server)
 const {User} = require('./public/users')
 const server = require('http').Server(app)
