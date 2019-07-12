@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Chat App</title>
-        <!-- <script defer src="http://localhost:3000/socket.io/socket.io.js"></script> -->
-        <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script>
+        <link rel="icon" type="image/png" href="download.jpg">
+
+        <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+        <!-- <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script> -->
         <script defer src ="script.js"></script>
         
         <!-- Latest compiled and minified CSS -->
@@ -23,7 +25,9 @@
             padding-left:30%;
             }
             body{
-                background: #212121;
+                background:url('bg1.jpg');
+                background-attachment: fixed;
+                background-position: center;
                 color:white;
                 text-transform: uppercase;
             }
@@ -52,17 +56,18 @@
                 font-size:20px;
                 padding: 10px;
                 padding-left:20px;
-                color:black;
+                color:white;
                 margin-bottom:3vh;
+                background-color: transparent;
             }
             .button{
                 padding:10px;
                 border-radius:15px;
-                background-color:darkblue;
-                font-size:20px;
+                background-color:transparent;
+                font-size:25px;
                 color:white;
                 border:none;
-                font-weight: 600;
+                font-weight: 700;
                 margin-left:5%;
                 margin-bottom:3vh;
                 width:25%;
@@ -73,7 +78,7 @@
                 text-decoration: none;
                 border:none;
                 background:transparent;
-                font-size:20px;
+                font-size:25px;
                 border-bottom:1px solid white;
                 text-transform: uppercase;
             }
@@ -86,8 +91,8 @@
                     margin-bottom:2vh;
                 }
                 .button{
-                    margin-left:22%;
-                    width:45%;
+                    margin-left:18%;
+                    width:65%;
                 }
                 #group-container{
                     margin-left:28%;
@@ -101,11 +106,6 @@
     <body>
         <div class="container">
             <div id="group-container">
-                <!-- <% Object.keys(groups).forEach (group =>{  %>
-                    <div><%= group %></div>
-                    <a href="#" onclick="alert('First Login')">Join</a>
-                    <button id="delete">Delete</button>
-                <% }) %>  -->
             </div>
             <form action ='/Register' method="POST" autocomplete="off">
                 <input name ="group" type="text" id="input1" placeholder="Group Name" required autocomplete="off"><br>
@@ -115,11 +115,4 @@
             </form>
         </div>
     </body>
-    <!-- <script>
-        $(document).ready(function(){
-            $("#delete").click(function(){
-                $("#group-container").remove();
-            });
-        });
-    </script> -->
 </html>

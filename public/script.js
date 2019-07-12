@@ -1,5 +1,5 @@
-// const socket = io('http://localhost:3000')
-const socket = io('https://chat-app2019.herokuapp.com')
+const socket = io('http://localhost:3000')
+// const socket = io('https://chat-app2019.herokuapp.com')
 
 const messageContainer = document.getElementById('message-container')
 const groupContainer = document.getElementById('group-container')
@@ -70,5 +70,6 @@ socket.on('user-disconnected', name => {
 function appendMessage(message){
     const messageElement = document.createElement('div')
     messageElement.innerText = message
+     
     messageContainer.append(messageElement)
 }

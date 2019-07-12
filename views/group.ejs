@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chat App</title>
+    <link rel="icon" type="image/png" href="download.jpg">
+
     <script>
       const groupName = "<%= groupName %>"
     </script>
-    <!-- <script defer src="http://localhost:3000/socket.io/socket.io.js"></script> -->
-    <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <!-- <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script> -->
     <script defer src ="script.js"></script>
     
     <!-- Latest compiled and minified CSS -->
@@ -27,15 +29,17 @@
         margin: 0;
         display: flex;
         justify-content: center;
-        background: #212121;
+        background:url('bg.jpg');
+        background-attachment: fixed;
       }
       #message-container {
         width: 80%;
+        position: relative;
         max-width: 1200px;
       }
       #message-container div {
         padding: 10px;
-        font-size:20px;
+        font-size:23px;
         color:white;
       }
       #message-input {
@@ -58,8 +62,9 @@
         padding:0;
         width:50px;
         height:50px;
-        background-color:darkgreen;
+        background-color:#00d600;
         font-size:30px;
+        border: none;
         color:white;
         font-weight: 600;
       }
@@ -83,12 +88,21 @@
   <body>
     <div class="container">
       <div class="row">
-          <div id="message-container"></div>
-          <form id="send-container" autocomplete="off">
-            <input type="text" id="message-input" required autocomplete="off">
-            <button type ="submit" id="send-button">></button>
-          </form>
+        <div id="message-container"></div>
+        <form id="send-container" autocomplete="off">
+          <input type="text" id="message-input" required autocomplete="off">
+          <button type ="submit" id="send-button" onclick="updated()">></button>
+        </form>
       </div>
     </div>
   </body>
+  <script>
+    function updated() {
+      console.log("Updated")
+      this.updateScroll()
+    }
+    function updateScroll() {
+      window.scrollTo(0,document.body.scrollHeight)
+    }
+  </script>
 </html>

@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Chat App</title>
-        <!-- <script defer src="http://localhost:3000/socket.io/socket.io.js"></script> -->
-        <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script>
+        <link rel="icon" type="image/png" href="download.jpg">
+        <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+        <!-- <script defer src="https://chat-app2019.herokuapp.com/socket.io/socket.io.js"></script> -->
         <script defer src ="script.js"></script>
        
         <!-- Latest compiled and minified CSS -->
@@ -20,7 +21,9 @@
     </head>
     <style>
         body{
-            background-color:#212121;
+            background:url('bg1.jpg');
+            background-attachment: fixed;
+            background-position: center;
         }
         .container{
             margin-top:15%;
@@ -33,14 +36,15 @@
             font-size:20px;
             padding: 10px;
             padding-left:20px;
-            color:black;
+            color:white;
             margin-bottom:2vh;
+            background-color: transparent;
         }
         button{
             padding:10px;
             border-radius:25px;
-            background-color:darkblue;
-            font-size:20px;
+            background-color:transparent;
+            font-size:25px;
             width:120px;
             margin-left:75px;
             color:white;

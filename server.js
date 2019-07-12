@@ -9,6 +9,7 @@ const mongoose = require('./db/mongoose.js')
 app.set('views','./views')
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
+app.use(express.static('views'))
 app.use(express.urlencoded({extended :true}))
 
 const groups = {}
